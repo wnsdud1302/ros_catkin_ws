@@ -46,9 +46,9 @@ include_directories(${catkin_INCLUDE_DIRS})
 ## 여기서 부터 targe을 빌드함
 ## ros_tutorial_msg_publisher 노드에 대한 빌드 옵션이다.
 ## 실행 파일, 타겟 링크 라이브러리, 추가 의존성 등을 설정한다.
-add_executable(turtlesim_subscriber src/turtlesim_subscriber.cpp)
+add_executable(pose_sub src/turtlesim_subscriber.cpp)
 ## 실행 파일이 link하는 라이브러리들을 지정함
-target_link_libraries(turtlesim_subscriber ${catkin_LIBRARIES})
+target_link_libraries(pose_sub ${catkin_LIBRARIES})
 ## 빌드 target의 메시지, 서비스, 또는 dynamic_recongiure 파라미터를 필요하는 다른 패키지의 target 
 ## 에 의존성을 갖는 다면 target catkin_EXPORTED_TARGETS에 대한 명확한 의존성을 기술할 필요
 ## 가 있다. (If you have ##a target which (even transitively) depends on some other target that needs 
@@ -61,6 +61,6 @@ target_link_libraries(turtlesim_subscriber ${catkin_LIBRARIES})
 ##target )
 ## add_dependencies(topic_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS})
 ## 위 두 조건을 만족하면 두 의존성을 함께 기술할 수 있다. 
-add_dependencies(turtlesim_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(pose_sub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 ## ros_tutorial_msg_subscriber 노드에 대한 빌드 옵션이다.
 
