@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>turtlesim_subscriber</name>
+  <name>turtlesim_pose_viewer</name>
   <version>0.1.0</version>
-  <description>The ros_tutorials package</description>
+  <description>turtlesim pose viewer</description>
   <maintainer email="junyeong@soongsil.ac.kr">junyeong Park</maintainer>
   <author email="junyeong@soongsil.ac.kr">junyeong Park</author>
   <license>BSD</license>
