@@ -1,0 +1,22 @@
+<launch>
+    <group ns="plus">
+    <arg name="g_operator" value="1"/>
+    <param name="calculation_method" value="$(arg g_operator)"/>
+    <node pkg="ros_tutorials_parameter" type="parameter_server" name="plus_server" output="screen"/>
+    </group>
+    <group ns="minus">
+    <arg name="g_operator" value="2"/>
+    <param name="calculation_method" value="$(arg g_operator)"/>
+    <node pkg="ros_tutorials_parameter" type="parameter_server" name="minus_server" output="screen"/>
+    </group>
+    <group ns="multi">
+    <arg name="g_operator" value="3"/>
+    <param name="calculation_method" value="$(arg g_operator)"/>
+    <node pkg="ros_tutorials_parameter" type="parameter_server" name="multi_server" output="screen"/>
+    </group>
+    <group ns="divide">
+    <arg name="g_operator" value="4"/>
+    <param name="calculation_method" value="$(arg g_operator)"/>
+    <node pkg="ros_tutorials_parameter" type="parameter_server" name="divide_server" output="screen"/>
+    </group>
+</launch>

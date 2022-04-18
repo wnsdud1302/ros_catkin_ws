@@ -1,0 +1,12 @@
+<launch>
+<group ns ="ns1">
+    <arg name="count" value="1000"/>
+    <param name="send_count" value="$(arg count)"/>
+    <node pkg="ros_tutorials_topic" type="topic_publisher" name="topic_publisher" output="screen"/>
+    <node pkg="ros_tutorials_topic" type="topic_subscriber" name="topic_subscriber" output="screen"/>
+</group>
+<group ns ="ns2">
+    <node pkg="ros_tutorials_topic" type="topic_publisher" name="topic_publisher" output="screen"/>
+    <node pkg="ros_tutorials_topic" type="topic_subscriber" name="topic_subscriber" output="screen"/>
+</group>
+</launch>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher" args="0.0 0.0 0.0 0.0 0.0 0.0 1.0 my_frame 10" output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz"/>
+    <node pkg="using_markers" type="basic_shapes" name="basic_shapes" output="screen"/>
+    <node pkg="using_markers" type="points_and_lines" name="points_and_lines" output="screen"/>
+</launch>
