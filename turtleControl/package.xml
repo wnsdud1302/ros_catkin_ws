@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>turtlesim_pub</name>
+  <name>turtleControl</name>
   <version>0.1.0</version>
   <description>turtlesim gemoetry_msgs publisher</description>
   <maintainer email="junyeong@soongsil.ac.kr">junyeong Park</maintainer>

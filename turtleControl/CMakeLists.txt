@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 ## project( ) 매크로를 이용하여 패키지 명을 지정
-project(turtlesim_pub)
+project(turtleControl)
 ## 캐킨 빌드를 할 때 요구되는 구성요소 패키지 탐색
 ## catki에 과련된 기본 패키지는 ‘REQUIRDED’ 옵션만 추가하면 됨
 ## find_package(catkin REQUIRED)
@@ -35,7 +35,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp)
 ## 캐킨 패키지 옵션으로 라이브러리, 캐킨 빌드 의존성, 시스템 의존 패키지를 기술한다.
 catkin_package(
 #INCLUDE_DIRS include
-LIBRARIES turtlesim_pub
+LIBRARIES turtleControls
 CATKIN_DEPENDS roscpp
 )
 ## target을 지정하기 전에 target 을 build할 때 Cmake에서 요구하는 모든 헤더파일의 인클루드 패스를
@@ -46,9 +46,9 @@ include_directories(${catkin_INCLUDE_DIRS})
 ## 여기서 부터 targe을 빌드함
 ## ros_tutorial_msg_publisher 노드에 대한 빌드 옵션이다.
 ## 실행 파일, 타겟 링크 라이브러리, 추가 의존성 등을 설정한다.
-add_executable(turtlesim_pub src/turtlesim_pub.cpp)
+add_executable(turtleControlInput src/turtleControlInput.cpp)
 ## 실행 파일이 link하는 라이브러리들을 지정함
-target_link_libraries(turtlesim_pub ${catkin_LIBRARIES})
+target_link_libraries(turtleControlInput ${catkin_LIBRARIES})
 ## 빌드 target의 메시지, 서비스, 또는 dynamic_recongiure 파라미터를 필요하는 다른 패키지의 target 
 ## 에 의존성을 갖는 다면 target catkin_EXPORTED_TARGETS에 대한 명확한 의존성을 기술할 필요
 ## 가 있다. (If you have ##a target which (even transitively) depends on some other target that needs 
@@ -61,5 +61,5 @@ target_link_libraries(turtlesim_pub ${catkin_LIBRARIES})
 ##target )
 ## add_dependencies(topic_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS})
 ## 위 두 조건을 만족하면 두 의존성을 함께 기술할 수 있다. 
-add_dependencies(turtlesim_pub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(turtleControlInput ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 ## ros_tutorial_msg_subscriber 노드에 대한 빌드 옵션이다.
