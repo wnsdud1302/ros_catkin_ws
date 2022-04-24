@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="2 0 0 0 0 0 parent_link child_link 100" />
+    <node pkg="rviz" type="rviz" name="rviz"/>
+    <node pkg="tf_transform_tutorial" type="tf_practice" name="tf_practice" output="screen"/>
+</launch>
