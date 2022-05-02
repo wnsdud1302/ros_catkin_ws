@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>turtlePose</name>
+  <version>0.1.0</version>
+  <description>turtlesim pose viewer</description>
+  <maintainer email="junyeong@soongsil.ac.kr">junyeong Park</maintainer>
+  <author email="junyeong@soongsil.ac.kr">junyeong Park</author>
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>tutlesim</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <!-- <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>visualization_msgs</build_export_depend> -->
+  <run_depend>roscpp</run_depend>
+  <run_depend>tutlesim</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <export></export>
+</package>

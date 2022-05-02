@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="angvel" default="90"/>
+    <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher" args="0.0 0.0 1.0 0.0 0.0 0.0 1.0 my_frame 10" output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz"/>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle"/>
+    <node pkg="turtlePose" type="turtlePoseDisplay" name="pose_diplay" output="screen"/>
+    <node pkg="turtlePose" type="turtleControl" name="pose_control" output="screen"/>
+    <param name="angularVel" value ="$(arg angvel)"/>
+</launch>
